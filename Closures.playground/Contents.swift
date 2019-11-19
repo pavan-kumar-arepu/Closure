@@ -102,3 +102,15 @@ incrementBy100()
 
 
 
+//An autoclosure is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function. It doesn’t take any arguments, and when it’s called, it returns the value of the expression that’s wrapped inside of it. This syntactic convenience lets you omit braces around a function’s parameter by writing a normal expression instead of an explicit closure.
+
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+print("Now serving, customersInLine\(customersInLine)!")
+
+
+let customerProvider = { customersInLine.remove(at: 1) }
+
+
+print("Now serving , customerProvider \(customerProvider())!")
+
+
