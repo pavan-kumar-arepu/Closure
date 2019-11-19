@@ -114,3 +114,26 @@ let customerProvider = { customersInLine.remove(at: 1) }
 print("Now serving , customerProvider \(customerProvider())!")
 
 
+//Few Basic Closures
+
+var name: () -> (String) = {
+    return "Kumar"
+}
+print ("Name: \(name())")
+
+var hello: () -> (String) = {
+    return "Hello!"
+}
+print ("Name: \(hello())")
+
+
+var doubleName:(Int) -> (Int) = { x in
+    return x * 10
+}
+
+
+print ("doubleName:\(doubleName(2))")
+var twoDoubleNames:(Int,Int) -> (Int) = {x,y in
+    return x * y * 4
+}
+print ("twoDoubleNames:\(twoDoubleNames(2,4))")
